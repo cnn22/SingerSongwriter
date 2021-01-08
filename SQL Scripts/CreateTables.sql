@@ -1,12 +1,5 @@
 USE SingerSongwriter;
 
-CREATE TABLE dimTime (
-	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
-    `Hour` INT NOT NULL,
-    `Minute` INT NOT NULL,
-    `Second` INT NOT NULL
-);
-
 CREATE TABLE dimDate (
 	ID INT AUTO_INCREMENT PRIMARY KEY NOT NULL,
     `Month` INT NOT NULL,
@@ -52,8 +45,6 @@ CREATE TABLE dimSong (
     FOREIGN KEY (ReleaseDateKey) REFERENCES dimDate(ID),
     ArtistBridgeKey INT,
     FOREIGN KEY (ArtistBridgeKey) REFERENCES ArtistBridge(ID),
-    DurationKey INT,
-    FOREIGN KEY (DurationKey) REFERENCES dimTime(ID),
     SongLabelKey INT,
     FOREIGN KEY (SongLabelKey) REFERENCES dimSongLabel(ID),
     Title VARCHAR(255) NOT NULL,
@@ -63,7 +54,8 @@ CREATE TABLE dimSong (
     Camelot VARCHAR(5),
     NumberOfUniqueWords INT,
     SentimentScore INT,
-    LyricsURL VARCHAR(255)
+    LyricsURL VARCHAR(255),
+    Duration Int
 );
 
 CREATE TABLE factSongWeeklyRank (
