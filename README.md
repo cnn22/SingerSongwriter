@@ -12,6 +12,10 @@ Word clouds are fun and sentimental analysis is great for exploring the data, bu
 # Phase 3 - Improving the Classifier - Currently in progress! 
 Although the RNN model was able to classify the songs, it had its flaws. The classifier used the bag of words method that did not take into consideration the context of the words. We noticed that the model would incorrectly classify a sentence because it containted a positive word, but how the word was used in the sentence was not necessarily a 'joyful' emotion. Our next goal was to find other methods that was able to take into consideratino the context of how the word was used instead of only evaluating the word itself. We began looking into other ways on how we could preprocess the text in a way where the model would be able to take into consideration certain words that triggered or changed the meaning of the text. 
 
-After reading several papers on emotion classification with NLP, we've discovered word2vec, a neural network model commonly used in the NLP community for preprocessing text data, could be used to help us em
+Currently working to encode each sentence in a block of text, broken out into two separate embedding methods. 
+1) emotional feature representation, embedding the six emotions we mentioned about earlier utilizing word2vec 
+2) 2) general sentence level representation utilizing Bidirectional Encoder Representations from Transformers (BERT).
+
+The goal is to then combine is to combine these two matrices to use as input for the context level encoder. 
 
 
