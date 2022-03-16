@@ -14,7 +14,7 @@ Although the RNN model was able to classify the songs, it had its flaws. The cla
 
 Currently working to encode each sentence in a block of text, broken out into two separate embedding methods. 
 1) emotional feature representation, embedding the six emotions we mentioned about earlier utilizing word2vec 
-2) 2) general sentence level representation utilizing Bidirectional Encoder Representations from Transformers (BERT).
+2) general sentence level representation utilizing Bidirectional Encoder Representations from Transformers (BERT).
 
 The goal is to then combine is to combine these two matrices to use as input for the context level encoder. 
 
