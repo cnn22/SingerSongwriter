@@ -3,11 +3,11 @@ singer songwriter project
 
 As huge fans of Shawn Mendes and data, we decided to combine the two passions together to further understand Shawn's music. We started with the Shawn Mendes album, released back in 2018, where several of his songs made it to billboard's top 100 and remained on the top 100 for awhile. We wanted to understand what kinds of emotions Shawn wrote used the most in the album and use it to help us understand why his songs were so popular.
 
-## Phase 1 - Gathering Data & Exploration
+### Phase 1 - Gathering Data & Exploration
 
 Utilizing Spotify's API with Python, we were able to extract song attributions such as, the key song was written in, duration, genre, and song lyrics. Every data project starts with exploration so we began by looking into most common words Shawn used in his music. We illustrated this using word cloud library in Pyhon. We found it fitting to turn the cloud into the shape of a guitar! Next, we did a simple sentimental analysis for each song by calculating the polarity and subjectivity scores and plotting the numbers on a graph. The results were surprising as we discovered that Shawn's music tends to be relatively objective-neutral despite most of his songs are about romance. Not surprisingly most of his songs had a more positive score than negative score in terms of polarity.
 
-## Phase 2
+### Phase 2
 Word clouds are fun and sentimental analysis is great for exploring the data, but it doesn't answer the deeper questions. We were not able to see what kinds of emotions Shawn typically wrote about. Sentimental analysis only tells us negative or positive, opinionated or objective. It fails to tells us if he likes to write about joy, sad, anger, etc. We began looking into methods of how NLP models processed and predicted emotions. We created our first Recurrent Neural Network (RNN), to process and clasify emotions. We defined our model to use what Paul Ekman identified as the basic universal emotions: anger, surprise, disgust, joy, fear and sadness. We played around with how much of the corpus to pass in, a sentece vs a block of text.
 
 ## Phase 3 - Currently in progress! 
